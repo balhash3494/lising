@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ЛизингПро — лизинг транспорта, спецтехники и оборудования</title>
+  <meta name="description" content="Брокер лизинга: подберём лучшее предложение от 40+ лизинговых компаний. Легковой и грузовой транспорт, спецтехника, оборудование. Калькулятор и заявка онлайн." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="#top">
+      <div class="logo-mark">Л</div>
+      <div>
+        <div class="logo-title">ЛизингПро</div>
+        <div class="logo-sub">Брокер лизинга</div>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="#services">Услуги</a>
+      <a href="#calculator">Калькулятор</a>
+      <a href="#how">Как это работает</a>
+      <a href="#why">Почему мы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <a class="phone" href="tel:+79160242211">📞 7 916 024-22-11</a>
+      <a class="btn btn-gold btn-sm" href="#apply">Оставить заявку</a>
+      <button class="menu-toggle" aria-label="Меню" id="menuToggle">☰</button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#services">Услуги</a>
+    <a href="#calculator">Калькулятор</a>
+    <a href="#how">Как это работает</a>
+    <a href="#why">Почему мы</a>
+    <a href="#contact">Контакты</a>
+    <a class="mobile-phone" href="tel:+78001234567">8 800 123-45-67</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-fade"></div>
+  <div class="container hero-content">
+    <span class="badge"><span class="dot"></span>Брокер лизинга — работаем с 40+ компаниями</span>
+    <h1>Лизинг транспорта<br/>и техники <span class="gold-text">без лишних шагов</span></h1>
+    <p class="hero-lead">Подберём лучшее предложение по ставке и условиям. Финансируем легковой и грузовой транспорт, спецтехнику и оборудование для бизнеса и ИП.</p>
+    <div class="hero-cta">
+      <a href="#apply" class="btn btn-gold btn-xl">Получить расчёт →</a>
+      <a href="#calculator" class="btn btn-ghost btn-xl">Калькулятор лизинга</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-icon">%</div><div class="stat-k">от 0%</div><div class="stat-v">Удорожание</div></div>
+      <div class="stat"><div class="stat-icon">⚡</div><div class="stat-k">1 день</div><div class="stat-v">Решение по заявке</div></div>
+      <div class="stat"><div class="stat-icon">🛡</div><div class="stat-k">до 10 лет</div><div class="stat-v">Срок лизинга</div></div>
+      <div class="stat"><div class="stat-icon">%</div><div class="stat-k">до 90%</div><div class="stat-v">Финансирование</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Что финансируем</div>
+        <h2>Лизинг для бизнеса любого масштаба</h2>
+      </div>
+      <p class="section-lead">От одного автомобиля до целого автопарка и производственной линии — подберём программу под вашу задачу.</p>
+    </div>
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calculator" class="section section-surface">
+  <div class="container">
+    <div class="section-head-narrow">
+      <div class="eyebrow">Калькулятор</div>
+      <h2>Рассчитайте платёж за минуту</h2>
+      <p class="muted">Предварительный расчёт. Финальные условия зависят от выбранной лизинговой компании и параметров сделки.</p>
+    </div>
+    <div class="calc-wrap">
+      <div class="calc-card">
+        <div class="calc-field">
+          <label>Категория техники</label>
+          <div class="cat-chips" id="catChips"></div>
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-row"><label>Стоимость техники</label><span class="val" id="priceVal"></span></div>
+          <input id="price" type="range" min="500000" max="30000000" step="50000" value="3500000" />
+          <div class="scale"><span>500 тыс</span><span>15 млн</span><span>30 млн</span></div>
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-row"><label>Авансовый платёж</label><span class="val" id="advVal"></span></div>
+          <input id="advance" type="range" min="0" max="49" step="1" value="20" />
+          <div class="scale"><span>0%</span><span>25%</span><span>49%</span></div>
+        </div>
+
+        <div class="calc-field">
+          <div class="calc-row"><label>Срок лизинга</label><span class="val" id="termVal"></span></div>
+          <input id="term" type="range" min="12" max="84" step="1" value="36" />
+          <div class="scale"><span>12 мес</span><span>48 мес</span><span>84 мес</span></div>
+        </div>
+      </div>
+
+      <aside class="calc-result">
+        <div class="result-label">Ежемесячный платёж</div>
+        <div class="result-value gold-text" id="monthly">—</div>
+        <div class="result-rows">
+          <div><span>Сумма финансирования</span><b id="financed">—</b></div>
+          <div><span>Сумма договора</span><b id="total">—</b></div>
+          <div><span>Удорожание</span><b id="overpay">—</b></div>
+          <div><span>Эффективная ставка</span><b id="rate">—</b></div>
+        </div>
+        <a href="#apply" class="btn btn-gold btn-lg full">Получить точный расчёт</a>
+        <p class="fineprint">Расчёт носит ознакомительный характер и не является публичной офертой.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how" class="section">
+  <div class="container">
+    <div class="section-head-narrow">
+      <div class="eyebrow">Процесс</div>
+      <h2>Как мы работаем</h2>
+    </div>
+    <ol class="steps">
+      <li><div class="step-n gold-text">01</div><h3>Заявка</h3><p>Заполните короткую форму или позвоните — уточним детали за 5 минут.</p></li>
+      <li><div class="step-n gold-text">02</div><h3>Подбор предложений</h3><p>Отправляем запрос в 40+ лизинговых компаний и собираем лучшие условия.</p></li>
+      <li><div class="step-n gold-text">03</div><h3>Решение</h3><p>Получаете предварительное одобрение и сравнение программ в течение 1 дня.</p></li>
+      <li><div class="step-n gold-text">04</div><h3>Договор</h3><p>Сопровождаем подписание договора лизинга и страхование объекта.</p></li>
+      <li><div class="step-n gold-text">05</div><h3>Передача техники</h3><p>Помогаем с приёмкой и оформлением — выходите на работу быстрее.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="section section-dark">
+  <div class="container why-grid">
+    <div>
+      <div class="eyebrow">Преимущества</div>
+      <h2>Почему выбирают нас</h2>
+      <p class="muted-light">Мы — независимый брокер. Не зависим от одной лизинговой компании и подбираем действительно лучшее предложение под вашу задачу.</p>
+    </div>
+    <div class="why-list">
+      <div class="why-item"><div class="why-icon">🤝</div><h3>40+ партнёров</h3><p>Работаем с ведущими лизинговыми компаниями страны.</p></div>
+      <div class="why-item"><div class="why-icon">💼</div><h3>Без комиссий клиенту</h3><p>Наше вознаграждение оплачивает лизинговая компания.</p></div>
+      <div class="why-item"><div class="why-icon">⏱</div><h3>Решение за 1 день</h3><p>Экспресс-программы по упрощённому пакету документов.</p></div>
+      <div class="why-item"><div class="why-icon">📄</div><h3>Минимум документов</h3><p>ИП и ООО — паспорт, ИНН, ОГРН. Без бухотчётности по экспресс.</p></div>
+      <div class="why-item"><div class="why-icon">🏢</div><h3>ИП, ООО, самозанятые</h3><p>Работаем со всеми формами бизнеса по всей России.</p></div>
+      <div class="why-item"><div class="why-icon">🎧</div><h3>Личный менеджер</h3><p>Сопровождаем сделку от заявки до передачи техники.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section id="apply" class="section section-surface">
+  <div class="container apply-grid">
+    <div>
+      <div class="eyebrow">Заявка</div>
+      <h2>Оставьте заявку —<br/><span class="gold-text">пришлём расчёт за 15 минут</span></h2>
+      <p class="muted">Подберём оптимальные программы лизинга от наших партнёров. Без обязательств с вашей стороны.</p>
+      <ul class="checks">
+        <li>✓ Бесплатная консультация</li>
+        <li>✓ Сравнение 5–7 предложений</li>
+        <li>✓ Помощь со сбором документов</li>
+      </ul>
+    </div>
+
+    <div class="form-card">
+      <form id="applyForm" novalidate>
+        <div class="form-field">
+          <label>Категория техники</label>
+          <div class="cat-chips" id="formCats"></div>
+          <input type="hidden" name="category" id="catInput" value="Легковой" />
+        </div>
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label>Имя *</label>
+            <input name="name" type="text" placeholder="Иван Иванов" required maxlength="80" />
+          </div>
+          <div class="form-field">
+            <label>Телефон *</label>
+            <input name="phone" type="tel" placeholder="+7 (___) ___-__-__" required maxlength="30" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Email</label>
+          <input name="email" type="email" placeholder="you@company.ru" maxlength="120" />
+        </div>
+        <div class="form-field">
+          <label>Комментарий</label>
+          <textarea name="comment" rows="3" maxlength="800" placeholder="Расскажите о технике, бюджете и сроках"></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-lg full" id="submitBtn">Отправить заявку</button>
+        <p class="fineprint">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
+        <div id="formMsg" class="form-msg" hidden></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contact" class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-mark">Л</div>
+        <div>
+          <div class="logo-title">ЛизингПро</div>
+          <div class="logo-sub">Брокер лизинга для бизнеса</div>
+        </div>
+      </div>
+      <p>Помогаем бизнесу получать технику и оборудование в лизинг на лучших условиях. Работаем по всей России с 2014 года.</p>
+    </div>
+    <div>
+      <div class="footer-title">Контакты</div>
+      <p>📞 <a href="tel:+79160242211">7 916 024-22-11</a></p>
+      <p>✉ <a href="mailto:Oleg2244@list.ru">Oleg2244@list.ru</a></p>
+      <p>📍 Москва, ул. Примерная, 1</p>
+    </div>
+    <div>
+      <div class="footer-title">Разделы</div>
+      <p><a href="#services">Услуги</a></p>
+      <p><a href="#calculator">Калькулятор</a></p>
+      <p><a href="#how">Как работаем</a></p>
+      <p><a href="#apply">Заявка</a></p>
+    </div>
+  </div>
+  <div class="container copyright">© 2026 ЛизингПро. Все права защищены.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
